@@ -1,2 +1,4 @@
-# Auto detect text files and perform LF normalization
+# Normalizar texto y conservar finales de línea compatibles con los lanzadores de Windows.
 * text=auto
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
