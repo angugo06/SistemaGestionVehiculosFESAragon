@@ -27,7 +27,15 @@ function Invoke-ProjectPnpm {
 }
 
 try {
-    Invoke-ProjectPnpm -Arguments @('install', '--frozen-lockfile')
+    # El lanzador se ejecuta sin entrada interactiva; pnpm puede necesitar
+    # reconstruir node_modules y no debe esperar una confirmación por TTY.
+    $previousCi = $env:CI
+    try {
+        $env:CI = 'true'
+        Invoke-ProjectPnpm -Arguments @('install', '--frozen-lockfile')
+    } finally {
+        $env:CI = $previousCi
+    }
     Invoke-ProjectPnpm -Arguments @('build')
     Write-Host ''
     $appPort = if ($env:PORT) { $env:PORT } else { '3000' }

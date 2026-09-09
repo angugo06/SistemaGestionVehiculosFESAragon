@@ -17,9 +17,10 @@ async function freePort() {
 async function verifyStartup(launcher: boolean) {
   const port = await freePort();
   const database = join(mkdtempSync(join(tmpdir(), 'aragon-arranque-')), 'limpio.sqlite');
+  const launcherPath = join(process.cwd(), 'INICIAR.cmd');
   const child = spawn(
     launcher ? 'cmd.exe' : process.execPath,
-    launcher ? ['/d', '/c', 'INICIAR.cmd'] : ['--import', 'tsx', 'server/index.ts', '--dev'],
+    launcher ? ['/d', '/c', launcherPath] : ['--import', 'tsx', 'server/index.ts', '--dev'],
     {
       cwd: process.cwd(),
       windowsHide: true,

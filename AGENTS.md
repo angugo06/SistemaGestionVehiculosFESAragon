@@ -1,7 +1,5 @@
 # Sistema de gestión vehicular FES Aragón
 
-Este repositorio es un proyecto escolar independiente de TravelAwareBooking, aunque esté dentro de su carpeta. La especificación funcional es el documento vehicular suministrado por el usuario. No aplican los paquetes, integraciones, despliegue ni reglas de reservas del proyecto padre.
-
 - Mantener interfaz, comentarios y documentación en español.
 - Usar TypeScript estricto, React, Express y SQLite local. Validar entradas con Zod.
 - Mantener separadas la interfaz, las rutas HTTP y las reglas de negocio.
