@@ -20,7 +20,9 @@ flowchart TD
 
 | Ruta                   | Responsabilidad                                       |
 | ---------------------- | ----------------------------------------------------- |
-| `src/App.tsx`          | Sesión, navegación y módulos de consulta              |
+| `src/App.tsx`          | Sesión, navegación y coordinación de módulos          |
+| `src/features/`        | Pantallas separadas por autenticación y dominio       |
+| `src/layout/`          | Elementos persistentes de identidad y estructura      |
 | `src/Dashboard.tsx`    | Indicadores, gráfica y ocupación                      |
 | `src/components.tsx`   | Tablas, filtros, formularios base y diálogos          |
 | `src/forms.tsx`        | Captura de movimientos, estados y catálogos           |
@@ -28,13 +30,14 @@ flowchart TD
 | `src/styles.css`       | Identidad visual, diseño adaptable y accesibilidad    |
 | `shared/types.ts`      | Contratos de datos y etiquetas de presentación        |
 | `server/validation.ts` | Esquemas y validación de entradas                     |
-| `server/service.ts`    | Permisos y reglas de negocio                          |
+| `server/service.ts`    | Fachada estable de los casos de uso                   |
+| `server/services/`     | Permisos, movimientos y administración por dominio    |
 | `server/database.ts`   | Esquema, transacciones, consultas y contraseñas       |
 | `server/seed.ts`       | Inicialización y datos ficticios                      |
 | `server/app.ts`        | API, autenticación, protección de solicitudes y CSV   |
 | `server/index.ts`      | Inicio local, interfaz compilada o Vite en desarrollo |
 | `scripts/backup.ts`    | Respaldo consistente de SQLite                        |
-| `tests/`               | Pruebas de dominio, API y navegador                   |
+| `tests/`               | Pruebas de dominio, API y navegador  x                |
 
 ## Modelo de datos
 
