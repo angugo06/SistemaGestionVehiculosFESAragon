@@ -6,6 +6,9 @@ Proyecto académico independiente. Los datos de demostración, matrículas, ruta
 
 ![Vista general del sistema Aragón Movilidad](docs/capturas/panel.png)
 
+## INICIAR EN LINUX SI NO TIENES node.js 24
+npm exec --yes --package=node@24 --package=pnpm@11.24.0 -- pnpm dev
+
 ## Iniciar en Windows
 
 1. Instala **Node.js 24 o superior** si todavía no lo tienes.
